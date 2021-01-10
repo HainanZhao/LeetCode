@@ -15,7 +15,7 @@ namespace MinimumTimeToCollectAllApplesInATree
             public List<TreeNode> Nodes = new List<TreeNode>();
         }
 
-        public int PickApple(TreeNode node)
+        private int PickApple(TreeNode node)
         {
             node.IsPicked = true;
             if (node.Nodes.Count == 0)

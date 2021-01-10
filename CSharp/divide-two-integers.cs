@@ -7,7 +7,7 @@ namespace DivideTwoIntegers
     public class Solution
     {
 
-        public int GetSum(List<int> sums, List<int> muls, int divident)
+        private int GetSum(List<int> sums, List<int> muls, int divident)
         {
             var sum = 0;
             var mul = 0;
