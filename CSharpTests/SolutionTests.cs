@@ -1,4 +1,6 @@
-﻿using RegularExpressionMatching;
+﻿using GenerateParentheses;
+using PowerN;
+using TrappingRainWater;
 using MinimumTimeToCollectAllApplesInATree;
 using MediumOfTwoSortedArrays;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -6,6 +8,54 @@ using DivideTwoIntegers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
+namespace GenerateParentheses.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void GenerateParenthesisTest()
+        {
+            var s = new Solution();
+            Assert.AreEqual(1, s.GenerateParenthesis(1).Count);
+            Assert.AreEqual(2, s.GenerateParenthesis(2).Count);
+            Assert.AreEqual(5, s.GenerateParenthesis(3).Count);
+        }
+    }
+}
+
+namespace PowerN.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void MyPowTest()
+        {
+            var s = new Solution();
+            Assert.AreEqual(4, s.MyPow(2, 2));
+            Assert.AreEqual(16, s.MyPow(2, 4));
+            Assert.AreEqual(0.5, s.MyPow(2, -1));
+            Assert.AreEqual(0.25, s.MyPow(2, -2));
+        }
+    }
+}
+
+namespace TrappingRainWater.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void TrapTest()
+        {
+            var s = new Solution();
+            Assert.AreEqual(9, s.Trap(new int[] { 4, 2, 0, 3, 2, 5 }));
+            Assert.AreEqual(6, s.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }));
+        }
+    }
+}
 
 namespace MinimumTimeToCollectAllApplesInATree.Tests
 {
