@@ -1,4 +1,7 @@
-﻿using GenerateParentheses;
+﻿using Triangle;
+using HIndex;
+using RectaguleArea;
+using GenerateParentheses;
 using PowerN;
 using TrappingRainWater;
 using MinimumTimeToCollectAllApplesInATree;
@@ -8,6 +11,57 @@ using DivideTwoIntegers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
+namespace Triangle.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void MinimumTotalTest()
+        {
+            var s = new Solution();
+            var list = new List<IList<int>>();
+            list.Add(new List<int>() { 2 });
+            list.Add(new List<int>() { 3, 4 });
+            list.Add(new List<int>() { 6, 5, 7 });
+            list.Add(new List<int>() { 4, 1, 8, 3 });
+
+            Assert.AreEqual(11, s.MinimumTotal(list));
+        }
+    }
+}
+
+namespace HIndex.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void HIndexTest()
+        {
+            var s = new Solution();
+            Assert.AreEqual(3, s.HIndex(new int[] { 3, 0, 6, 1, 5 }));
+            Assert.AreEqual(1, s.HIndex(new int[] {1}));
+            Assert.AreEqual(0, s.HIndex(new int[] { 0 }));
+        }
+    }
+}
+
+namespace RectaguleArea.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void ComputeAreaTest()
+        {
+            var s = new Solution();
+            Assert.AreEqual(45, s.ComputeArea(-3, 0, 3, 4, 0, -1, 9, 2));
+            Assert.AreEqual(20, s.ComputeArea(-2,-2, 2, 2, -1, 4, 1, 6));
+        }
+    }
+}
 
 namespace GenerateParentheses.Tests
 {
