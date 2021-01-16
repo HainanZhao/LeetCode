@@ -1,4 +1,5 @@
-﻿using Triangle;
+﻿using OnstructBinarSearchTreeFromPreorderTraversal;
+using Triangle;
 using HIndex;
 using RectaguleArea;
 using GenerateParentheses;
@@ -11,6 +12,21 @@ using DivideTwoIntegers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
+namespace OnstructBinarSearchTreeFromPreorderTraversal.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void BstFromPreorderTest()
+        {
+            var s = new Solution();
+            var root = s.BstFromPreorder(new int[] { 8, 5, 1, 7, 10, 12 });
+            Assert.AreEqual(root.val, 8);
+        }
+    }
+}
 
 namespace Triangle.Tests
 {
