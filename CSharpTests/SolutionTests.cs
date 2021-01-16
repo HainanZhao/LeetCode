@@ -1,4 +1,5 @@
-﻿using OnstructBinarSearchTreeFromPreorderTraversal;
+﻿using PermutationInString;
+using OnstructBinarSearchTreeFromPreorderTraversal;
 using Triangle;
 using HIndex;
 using RectaguleArea;
@@ -12,6 +13,21 @@ using DivideTwoIntegers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
+namespace PermutationInString.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void CheckInclusionTest()
+        {
+            var s = new Solution();
+            var valid = s.CheckInclusion("ab", "dcefgbajilkx");
+            Assert.AreEqual(true, valid);
+        }
+    }
+}
 
 namespace OnstructBinarSearchTreeFromPreorderTraversal.Tests
 {
