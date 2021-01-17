@@ -1,4 +1,5 @@
-﻿using PermutationInString;
+﻿using EditDistance;
+using PermutationInString;
 using OnstructBinarSearchTreeFromPreorderTraversal;
 using Triangle;
 using HIndex;
@@ -13,6 +14,21 @@ using DivideTwoIntegers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
+namespace EditDistance.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void MinDistanceTest()
+        {
+            var s = new Solution();
+            var v = s.MinDistance("plasma", "altruism");
+            Assert.AreEqual(6, v);
+        }
+    }
+}
 
 namespace PermutationInString.Tests
 {
