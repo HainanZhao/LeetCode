@@ -1,4 +1,6 @@
-﻿using OnstructBinarSearchTreeFromPreorderTraversal;
+﻿using EditDistance;
+using PermutationInString;
+using OnstructBinarSearchTreeFromPreorderTraversal;
 using Triangle;
 using HIndex;
 using RectaguleArea;
@@ -12,6 +14,36 @@ using DivideTwoIntegers;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
+namespace EditDistance.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void MinDistanceTest()
+        {
+            var s = new Solution();
+            var v = s.MinDistance("plasma", "altruism");
+            Assert.AreEqual(6, v);
+        }
+    }
+}
+
+namespace PermutationInString.Tests
+{
+    [TestClass()]
+    public class SolutionTests
+    {
+        [TestMethod()]
+        public void CheckInclusionTest()
+        {
+            var s = new Solution();
+            var valid = s.CheckInclusion("ab", "dcefgbajilkx");
+            Assert.AreEqual(true, valid);
+        }
+    }
+}
 
 namespace OnstructBinarSearchTreeFromPreorderTraversal.Tests
 {
