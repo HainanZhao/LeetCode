@@ -16,12 +16,12 @@ namespace CSharp
             if (line.Count == 0)
                 return "";
 
-            if (isLast || line.Count() == 1)
+            if (isLast || line.Count == 1)
             {
-                for (var i = 0; i < line.Count(); i++)
+                for (var i = 0; i < line.Count; i++)
                 {
                     sb.Append(line[i]);
-                    if (i != line.Count() - 1)
+                    if (i != line.Count - 1)
                     {
                         sb.Append(" ");
                         extra--;
@@ -41,7 +41,7 @@ namespace CSharp
                 for (var i = 0; i < line.Count; i++)
                 {
                     sb.Append(line[i]);
-                    if (i != line.Count() - 1)
+                    if (i != line.Count - 1)
                     {
                         for (var j = 0; j < filler; j++)
                         {
